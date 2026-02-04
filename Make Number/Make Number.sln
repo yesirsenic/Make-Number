@@ -75,6 +75,8 @@ Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Unity.InternalAPIEngineBrid
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Unity.Burst.Editor", "Unity.Burst.Editor.csproj", "{B41661CA-98C4-A7A7-BF97-BBF277717C84}"
 EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Assembly-CSharp", "Assembly-CSharp.csproj", "{600117ED-0448-65EC-E45E-4C36AA5EA06D}"
+EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Unity.2D.Common.Editor", "Unity.2D.Common.Editor.csproj", "{854FA314-A448-4451-7680-092D33B105D7}"
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Unity.2D.PixelPerfect", "Unity.2D.PixelPerfect.csproj", "{B6C83EA2-7FF2-D2E0-1452-2CB2391EBADB}"
@@ -247,6 +249,10 @@ Global
 		{B41661CA-98C4-A7A7-BF97-BBF277717C84}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{B41661CA-98C4-A7A7-BF97-BBF277717C84}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{B41661CA-98C4-A7A7-BF97-BBF277717C84}.Release|Any CPU.Build.0 = Release|Any CPU
+		{600117ED-0448-65EC-E45E-4C36AA5EA06D}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{600117ED-0448-65EC-E45E-4C36AA5EA06D}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{600117ED-0448-65EC-E45E-4C36AA5EA06D}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{600117ED-0448-65EC-E45E-4C36AA5EA06D}.Release|Any CPU.Build.0 = Release|Any CPU
 		{854FA314-A448-4451-7680-092D33B105D7}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
 		{854FA314-A448-4451-7680-092D33B105D7}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{854FA314-A448-4451-7680-092D33B105D7}.Release|Any CPU.ActiveCfg = Release|Any CPU
