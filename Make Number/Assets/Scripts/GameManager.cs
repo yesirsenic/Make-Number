@@ -2,6 +2,11 @@
 using UnityEngine;
 using UnityEngine.UI;
 
+public enum GameState
+{
+    MainGame, GameOver, GameClear
+}
+
 public class GameManager : MonoBehaviour
 {
     public static GameManager Instance;
@@ -12,10 +17,15 @@ public class GameManager : MonoBehaviour
     [SerializeField]
     Text goalText;
 
+    [SerializeField]
+    TimerSlider slider;
+
     private int number;
     private int goalNumber;
 
     private float spawnDuration = 0.5f;
+
+    public GameState state;
 
     private void Awake()
     {
@@ -29,9 +39,11 @@ public class GameManager : MonoBehaviour
     
     void __Init__()
     {
+        state = GameState.MainGame;
         BoardManager.Instance.Init_Cells();
         BoardManager.Instance.RandomizeCells();
         SetNumber();
+        slider.__Init__();
         
     }
 

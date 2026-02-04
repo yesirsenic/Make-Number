@@ -61,6 +61,7 @@
   </ItemGroup>
   <ItemGroup>
     <Compile Include="Assets\Scripts\CellSelectable.cs" />
+    <Compile Include="Assets\Scripts\TimerSlider.cs" />
     <Compile Include="Assets\Scripts\DragSelectManager.cs" />
     <Compile Include="Assets\Scripts\GameManager.cs" />
     <Compile Include="Assets\Scripts\CellData.cs" />
