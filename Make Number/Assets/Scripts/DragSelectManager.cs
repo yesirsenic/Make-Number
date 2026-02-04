@@ -17,7 +17,7 @@ public class DragSelectManager : MonoBehaviour
 
     public bool CanSelect(CellSelectable cell)
     {
-        if (selectedCells.Contains(cell)) return false;
+        if (selectedCells.Contains(cell) || !cell.isSpawn) return false;
         return selectedCells.Count < maxSelectCount;
     }
 

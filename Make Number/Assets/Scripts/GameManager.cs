@@ -1,4 +1,5 @@
-﻿using UnityEngine;
+﻿using Unity.VisualScripting;
+using UnityEngine;
 using UnityEngine.UI;
 
 public class GameManager : MonoBehaviour
@@ -14,6 +15,8 @@ public class GameManager : MonoBehaviour
     private int number;
     private int goalNumber;
 
+    private float spawnDuration = 0.5f;
+
     private void Awake()
     {
         Instance = this;
@@ -26,11 +29,12 @@ public class GameManager : MonoBehaviour
     
     void __Init__()
     {
+        BoardManager.Instance.Init_Cells();
         BoardManager.Instance.RandomizeCells();
         SetNumber();
+        
     }
 
-    // ⭐ 핵심 함수
     public void OnCellsSelected(CellSelectable first, CellSelectable second)
     {
         CellData a = first.GetComponent<CellData>();
@@ -46,6 +50,10 @@ public class GameManager : MonoBehaviour
 
 
         CalulateNum(c_arr);
+
+        VanishNum(c_arr);
+
+
 
     }
 
@@ -109,6 +117,24 @@ public class GameManager : MonoBehaviour
         while (goalNumber == number);
 
         goalText.text = goalNumber.ToString();
+
+
+    }
+
+    private void VanishNum(CellData[] arr)
+    {
+        foreach(CellData k in arr)
+        {
+            GameObject textObject = k.transform.GetChild(0).gameObject;
+            
+            k.gameObject.GetComponent<CellSelectable>().Deselect();
+            Color c = textObject.GetComponent<Text>().color;
+            c.a = 0;
+            textObject.GetComponent<Text>().color = c;
+            k.GetComponent<CellSelectable>().ReSpawn(spawnDuration);
+        }
+
+
 
 
     }
