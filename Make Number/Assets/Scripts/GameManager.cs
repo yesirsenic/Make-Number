@@ -30,8 +30,12 @@ public class GameManager : MonoBehaviour
     [SerializeField]
     GameObject GameOverPopup;
 
+    [SerializeField]
+    Text LevelText;
+
     private int number;
     private int goalNumber;
+    private int level;
 
     private float spawnDuration = 0.5f;
 
@@ -40,6 +44,11 @@ public class GameManager : MonoBehaviour
     private void Awake()
     {
         Instance = this;
+
+        if (PlayerPrefs.GetInt("Level") == 0)
+        {
+            PlayerPrefs.SetInt("Level", 1);
+        }
     }
 
     private void Start()
@@ -54,6 +63,8 @@ public class GameManager : MonoBehaviour
         BoardManager.Instance.RandomizeCells();
         SetNumber();
         slider.__Init__();
+        level = PlayerPrefs.GetInt("Level");
+        LevelText.text = "Lv. " + level.ToString();
         
     }
 
@@ -173,7 +184,8 @@ public class GameManager : MonoBehaviour
         if(number == goalNumber)
         {
             state = GameState.GameClear;
-
+            level += 1;
+            PlayerPrefs.SetInt("Level", level);
             ClearPopup.SetActive(true);
         }
     }
