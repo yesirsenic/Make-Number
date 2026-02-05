@@ -31,6 +31,14 @@ public class TimerSlider : MonoBehaviour
 
     void Update()
     {
+        if (GameManager.Instance.state != GameState.MainGame)
+            return;
+
+        if(slider.value == 0)
+        {
+            GameManager.Instance.GameOverStart();
+        }
+
         elapsed += Time.deltaTime;
 
         slider.value = Mathf.Clamp01(1f - (elapsed / duration));

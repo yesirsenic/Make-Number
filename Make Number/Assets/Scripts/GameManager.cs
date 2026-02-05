@@ -1,4 +1,5 @@
-﻿using Unity.VisualScripting;
+﻿using System.Collections;
+using Unity.VisualScripting;
 using UnityEngine;
 using UnityEngine.UI;
 
@@ -20,6 +21,15 @@ public class GameManager : MonoBehaviour
     [SerializeField]
     TimerSlider slider;
 
+    [SerializeField]
+    GameObject ClearPopup;
+
+    [SerializeField]
+    GameObject GameOverTimer;
+
+    [SerializeField]
+    GameObject GameOverPopup;
+
     private int number;
     private int goalNumber;
 
@@ -37,7 +47,7 @@ public class GameManager : MonoBehaviour
         __Init__();
     }
     
-    void __Init__()
+    public void __Init__()
     {
         state = GameState.MainGame;
         BoardManager.Instance.Init_Cells();
@@ -67,6 +77,11 @@ public class GameManager : MonoBehaviour
 
 
 
+    }
+
+    public void GameOverStart()
+    {
+        StartCoroutine(GameOver());
     }
 
     private void CalulateNum(CellData[] arr)
@@ -115,6 +130,8 @@ public class GameManager : MonoBehaviour
 
         numberText.text = number.ToString();
 
+        CheckClear();
+
     }
 
     private void SetNumber()
@@ -149,5 +166,38 @@ public class GameManager : MonoBehaviour
 
 
 
+    }
+
+    private void CheckClear()
+    {
+        if(number == goalNumber)
+        {
+            state = GameState.GameClear;
+
+            ClearPopup.SetActive(true);
+        }
+    }
+
+    
+
+    IEnumerator GameOver()
+    {
+        state = GameState.GameOver;
+
+        GameOverTimer.SetActive(true);
+
+        Animator anim = GameOverTimer.GetComponent<Animator>();
+
+        // Animator 한 프레임 기다려서 상태 갱신
+        yield return null;
+
+        // 현재 재생 중인 애니메이션 길이만큼 대기
+        yield return new WaitForSeconds(
+            anim.GetCurrentAnimatorStateInfo(0).length
+        );
+
+        GameOverTimer.SetActive(false);
+
+        GameOverPopup.SetActive(true);
     }
 }
