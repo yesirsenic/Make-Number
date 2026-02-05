@@ -40,6 +40,7 @@ public class GameManager : MonoBehaviour
     private float spawnDuration = 0.5f;
 
     public GameState state;
+    public float duration;
 
     private void Awake()
     {
@@ -48,6 +49,11 @@ public class GameManager : MonoBehaviour
         if (PlayerPrefs.GetInt("Level") == 0)
         {
             PlayerPrefs.SetInt("Level", 1);
+        }
+
+        if(PlayerPrefs.GetFloat("Duration") == 0)
+        {
+            PlayerPrefs.SetFloat("Duration", 30f);
         }
     }
 
@@ -59,13 +65,16 @@ public class GameManager : MonoBehaviour
     public void __Init__()
     {
         state = GameState.MainGame;
+        duration = PlayerPrefs.GetFloat("Duration");
         BoardManager.Instance.Init_Cells();
         BoardManager.Instance.RandomizeCells();
         SetNumber();
         slider.__Init__();
         level = PlayerPrefs.GetInt("Level");
         LevelText.text = "Lv. " + level.ToString();
-        
+        Debug.Log(duration);
+
+
     }
 
     public void OnCellsSelected(CellSelectable first, CellSelectable second)
@@ -93,6 +102,7 @@ public class GameManager : MonoBehaviour
     public void GameOverStart()
     {
         StartCoroutine(GameOver());
+
     }
 
     private void CalulateNum(CellData[] arr)
@@ -187,10 +197,37 @@ public class GameManager : MonoBehaviour
             level += 1;
             PlayerPrefs.SetInt("Level", level);
             ClearPopup.SetActive(true);
+            DurationDown(duration - slider.GetElapsed());
         }
     }
 
-    
+    private void DurationDown(float remain_Time)
+    {
+        float baseDuration = duration;
+
+        Debug.Log(remain_Time);
+
+        if (remain_Time > baseDuration * 0.5f)
+        {
+            duration -= 2f;
+        }
+        else if (remain_Time > baseDuration * 0.33f)
+        {
+            duration -= 1.5f;
+        }
+        else if (remain_Time > baseDuration * 0.25f)
+        {
+            duration -= 1f;
+        }
+        else
+        {
+            duration -= 0.5f;
+        }
+
+        PlayerPrefs.SetFloat("Duration", duration);
+    }
+
+
 
     IEnumerator GameOver()
     {
@@ -211,5 +248,11 @@ public class GameManager : MonoBehaviour
         GameOverTimer.SetActive(false);
 
         GameOverPopup.SetActive(true);
+
+        if (duration < 45)
+        {
+            duration += 1.5f;
+            PlayerPrefs.SetFloat("Duration", duration);
+        }
     }
 }

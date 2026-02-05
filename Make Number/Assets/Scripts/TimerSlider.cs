@@ -5,8 +5,6 @@ using UnityEngine.UI;
 
 public class TimerSlider : MonoBehaviour
 {
-    
-    [SerializeField] private float duration = 30f;
 
     private Slider slider;
 
@@ -41,6 +39,11 @@ public class TimerSlider : MonoBehaviour
 
         elapsed += Time.deltaTime;
 
-        slider.value = Mathf.Clamp01(1f - (elapsed / duration));
+        slider.value = Mathf.Clamp01(1f - (elapsed / GameManager.Instance.duration));
+    }
+
+    public float GetElapsed()
+    {
+        return elapsed;
     }
 }
