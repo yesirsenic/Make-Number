@@ -19,4 +19,23 @@ public class ButtonManager : MonoBehaviour
     {
         SceneManager.LoadScene("MainGame");
     }
+
+    public void OnClickContinueWithAd()
+    {
+        AdsManager.Instance.ShowRewardedAd(
+        onCompleted: () =>
+        {
+            GameManager.Instance.Continue_Init_();
+        },
+        onFailed: () =>
+        {
+            GameManager.Instance.NoContiue();
+        }
+    );
+    }
+
+    public void NoContinueButton()
+    {
+        GameManager.Instance.NoContiue();
+    }
 }

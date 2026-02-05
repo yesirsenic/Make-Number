@@ -33,11 +33,16 @@ public class GameManager : MonoBehaviour
     [SerializeField]
     Text LevelText;
 
+    [SerializeField]
+    GameObject Continue_Popup;
+
     private int number;
     private int goalNumber;
     private int level;
 
     private float spawnDuration = 0.5f;
+
+    private bool is_First;
 
     public GameState state;
     public float duration;
@@ -72,9 +77,18 @@ public class GameManager : MonoBehaviour
         slider.__Init__();
         level = PlayerPrefs.GetInt("Level");
         LevelText.text = "Lv. " + level.ToString();
+        is_First = true;
+
         Debug.Log(duration);
 
 
+    }
+
+    public void Continue_Init_()
+    {
+        state = GameState.MainGame;
+        slider.__Init__();
+        Continue_Popup.SetActive(false);
     }
 
     public void OnCellsSelected(CellSelectable first, CellSelectable second)
@@ -103,6 +117,21 @@ public class GameManager : MonoBehaviour
     {
         StartCoroutine(GameOver());
 
+    }
+
+    public void NoContiue()
+    {
+        Continue_Popup.SetActive(false);
+
+        GameOverPopup.SetActive(true);
+
+        if (duration < 45)
+        {
+            duration += 1.5f;
+            PlayerPrefs.SetFloat("Duration", duration);
+        }
+
+        AdsManager.Instance.ShowInterstitialAd();
     }
 
     private void CalulateNum(CellData[] arr)
@@ -198,6 +227,7 @@ public class GameManager : MonoBehaviour
             PlayerPrefs.SetInt("Level", level);
             ClearPopup.SetActive(true);
             DurationDown(duration - slider.GetElapsed());
+            InterstitialAdController.Instance.OnGameClear();
         }
     }
 
@@ -247,12 +277,26 @@ public class GameManager : MonoBehaviour
 
         GameOverTimer.SetActive(false);
 
-        GameOverPopup.SetActive(true);
-
-        if (duration < 45)
+        if (is_First)
         {
-            duration += 1.5f;
-            PlayerPrefs.SetFloat("Duration", duration);
+            Continue_Popup.SetActive(true);
+
+            is_First = false;
         }
+
+        else
+        {
+            GameOverPopup.SetActive(true);
+
+            if (duration < 45)
+            {
+                duration += 1.5f;
+                PlayerPrefs.SetFloat("Duration", duration);
+            }
+        }
+
+
+
+            
     }
 }
