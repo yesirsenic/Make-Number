@@ -65,6 +65,7 @@
     <Compile Include="Assets\Scripts\NoAdsManager.cs" />
     <Compile Include="Assets\Scripts\SFXData.cs" />
     <Compile Include="Assets\Scripts\IAPManager.cs" />
+    <Compile Include="Assets\Scripts\MobilePerformanceManager.cs" />
     <Compile Include="Assets\Scripts\TimerSlider.cs" />
     <Compile Include="Assets\Scripts\ButtonManager.cs" />
     <Compile Include="Assets\Scripts\BannerAd.cs" />
@@ -72,6 +73,7 @@
     <Compile Include="Assets\Scripts\DragSelectManager.cs" />
     <Compile Include="Assets\Scripts\GameManager.cs" />
     <Compile Include="Assets\Scripts\InterstitialAdController.cs" />
+    <Compile Include="Assets\Scripts\NOADButton.cs" />
     <Compile Include="Assets\Scripts\CellData.cs" />
     <Compile Include="Assets\Scripts\BoardManager.cs" />
     <Compile Include="Assets\Scripts\SFXManager.cs" />
