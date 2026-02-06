@@ -5,7 +5,7 @@ using UnityEngine.UI;
 
 public enum GameState
 {
-    MainGame, GameOver, GameClear
+    MainGame, GameOver, GameClear, Tutorial
 }
 
 public class GameManager : MonoBehaviour
@@ -38,6 +38,9 @@ public class GameManager : MonoBehaviour
 
     [SerializeField]
     AudioSource BGM_Audio;
+
+    [SerializeField]
+    GameObject Tutorial;
 
     private int number;
     private int goalNumber;
@@ -72,6 +75,13 @@ public class GameManager : MonoBehaviour
     
     public void __Init__()
     {
+        if(PlayerPrefs.GetInt("Tutorial") == 0)
+        {
+            state = GameState.Tutorial;
+            Tutorial.SetActive(true);
+            return;
+        }
+
         state = GameState.MainGame;
         duration = PlayerPrefs.GetFloat("Duration");
         BoardManager.Instance.Init_Cells();
@@ -143,6 +153,15 @@ public class GameManager : MonoBehaviour
         }
 
         AdsManager.Instance.ShowInterstitialAd();
+    }
+
+    public void Tutorial_Off()
+    {
+        PlayerPrefs.SetInt("Tutorial", 1);
+
+        __Init__();
+
+
     }
 
     private void CalulateNum(CellData[] arr)

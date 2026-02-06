@@ -43,4 +43,9 @@ public class ButtonManager : MonoBehaviour
     {
         GameManager.Instance.NoContiue();
     }
+
+    public void Tutorial_Off()
+    {
+        GameManager.Instance.Tutorial_Off();
+    }
 }
