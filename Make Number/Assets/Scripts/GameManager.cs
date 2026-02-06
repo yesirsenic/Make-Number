@@ -36,6 +36,9 @@ public class GameManager : MonoBehaviour
     [SerializeField]
     GameObject Continue_Popup;
 
+    [SerializeField]
+    AudioSource BGM_Audio;
+
     private int number;
     private int goalNumber;
     private int level;
@@ -78,7 +81,8 @@ public class GameManager : MonoBehaviour
         level = PlayerPrefs.GetInt("Level");
         LevelText.text = "Lv. " + level.ToString();
         is_First = true;
-
+        BGM_Audio.time = 0f;
+        BGM_Audio.Play();
         Debug.Log(duration);
 
 
@@ -89,6 +93,9 @@ public class GameManager : MonoBehaviour
         state = GameState.MainGame;
         slider.__Init__();
         Continue_Popup.SetActive(false);
+        BGM_Audio.time = 0f;
+        BGM_Audio.Play();
+
     }
 
     public void OnCellsSelected(CellSelectable first, CellSelectable second)
@@ -109,6 +116,8 @@ public class GameManager : MonoBehaviour
 
         VanishNum(c_arr);
 
+        SFXManager.Instance.Play(SFXType.DragSuccess);
+
 
 
     }
@@ -124,6 +133,8 @@ public class GameManager : MonoBehaviour
         Continue_Popup.SetActive(false);
 
         GameOverPopup.SetActive(true);
+
+        SFXManager.Instance.Play(SFXType.GameOver);
 
         if (duration < 45)
         {
@@ -228,6 +239,8 @@ public class GameManager : MonoBehaviour
             ClearPopup.SetActive(true);
             DurationDown(duration - slider.GetElapsed());
             InterstitialAdController.Instance.OnGameClear();
+            SFXManager.Instance.Play(SFXType.GameClear);
+            BGM_Audio.Stop();
         }
     }
 
@@ -265,6 +278,10 @@ public class GameManager : MonoBehaviour
 
         GameOverTimer.SetActive(true);
 
+        SFXManager.Instance.Play(SFXType.GameOverTimer);
+
+        BGM_Audio.Stop();
+
         Animator anim = GameOverTimer.GetComponent<Animator>();
 
         // Animator 한 프레임 기다려서 상태 갱신
@@ -286,6 +303,8 @@ public class GameManager : MonoBehaviour
 
         else
         {
+            SFXManager.Instance.Play(SFXType.GameOver);
+
             GameOverPopup.SetActive(true);
 
             if (duration < 45)

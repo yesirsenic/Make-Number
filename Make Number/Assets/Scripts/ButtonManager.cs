@@ -10,6 +10,11 @@ public class ButtonManager : MonoBehaviour
         GameManager.Instance.__Init__();
     }
 
+    public void ButtonClickSound()
+    {
+        SFXManager.Instance.Play(SFXType.ButtonClick);
+    }
+
     public void ToMainMenu()
     {
         SceneManager.LoadScene("MainMenu");

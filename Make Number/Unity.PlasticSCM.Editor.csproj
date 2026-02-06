@@ -74,13 +74,13 @@
     <Compile Include="Library\PackageCache\com.unity.collab-proxy@2.11.3\Editor\CloudDrive\Workspaces\Tree\CloudWorkspacesTreeViewMenu.cs" />
     <Compile Include="Library\PackageCache\com.unity.collab-proxy@2.11.3\Editor\UI\RunModal.cs" />
     <Compile Include="Library\PackageCache\com.unity.collab-proxy@2.11.3\Editor\Views\Merge\Developer\DirectoryConflicts\MoveDeleteMenu.cs" />
-    <Compile Include="Library\PackageCache\com.unity.collab-proxy@2.11.3\Editor\Tool\PlasticExeLauncher.cs" />
     <Compile Include="Library\PackageCache\com.unity.collab-proxy@2.11.3\Editor\CloudDrive\Workspaces\DirectoryContent\ItemsGridSelection.cs" />
+    <Compile Include="Library\PackageCache\com.unity.collab-proxy@2.11.3\Editor\Tool\PlasticExeLauncher.cs" />
     <Compile Include="Library\PackageCache\com.unity.collab-proxy@2.11.3\Editor\Views\Merge\Developer\DirectoryConflicts\DrawDirectoryResolutionPanel.cs" />
     <Compile Include="Library\PackageCache\com.unity.collab-proxy@2.11.3\Editor\Views\Diff\GetClientDiffInfos.cs" />
     <Compile Include="Library\PackageCache\com.unity.collab-proxy@2.11.3\Editor\Views\Diff\DiffTreeView.cs" />
-    <Compile Include="Library\PackageCache\com.unity.collab-proxy@2.11.3\Editor\Views\Locks\LocksViewMenu.cs" />
     <Compile Include="Library\PackageCache\com.unity.collab-proxy@2.11.3\Editor\UI\UnityThreadWaiter.cs" />
+    <Compile Include="Library\PackageCache\com.unity.collab-proxy@2.11.3\Editor\Views\Locks\LocksViewMenu.cs" />
     <Compile Include="Library\PackageCache\com.unity.collab-proxy@2.11.3\Editor\Settings\PendingChangesOptionsFoldout.cs" />
     <Compile Include="Library\PackageCache\com.unity.collab-proxy@2.11.3\Editor\UI\PlasticDialog.cs" />
     <Compile Include="Library\PackageCache\com.unity.collab-proxy@2.11.3\Editor\Views\PendingChanges\PendingChangesViewPendingChangeMenu.cs" />
@@ -227,8 +227,8 @@
     <Compile Include="Library\PackageCache\com.unity.collab-proxy@2.11.3\Editor\AssetsUtils\Processor\UVCSAssetsProcessor.cs" />
     <Compile Include="Library\PackageCache\com.unity.collab-proxy@2.11.3\Editor\Views\Merge\Developer\DirectoryConflicts\MoveAddMenu.cs" />
     <Compile Include="Library\PackageCache\com.unity.collab-proxy@2.11.3\Editor\AssetOverlays\Cache\BuildPathDictionary.cs" />
-    <Compile Include="Library\PackageCache\com.unity.collab-proxy@2.11.3\Editor\Views\Branch\BranchListViewItem.cs" />
     <Compile Include="Library\PackageCache\com.unity.collab-proxy@2.11.3\Editor\CloudDrive\Workspaces\DirectoryContent\DirectoryContentPanelMenu.cs" />
+    <Compile Include="Library\PackageCache\com.unity.collab-proxy@2.11.3\Editor\Views\Branch\BranchListViewItem.cs" />
     <Compile Include="Library\PackageCache\com.unity.collab-proxy@2.11.3\Editor\AssetsUtils\RepaintEditor.cs" />
     <Compile Include="Library\PackageCache\com.unity.collab-proxy@2.11.3\Editor\UI\UnityInternals\UnityEditor\TreeViewExtensions.cs" />
     <Compile Include="Library\PackageCache\com.unity.collab-proxy@2.11.3\Editor\UI\EditorVersion.cs" />
@@ -455,9 +455,9 @@
     <Compile Include="Library\PackageCache\com.unity.collab-proxy@2.11.3\Editor\UI\UIElements\LoadingSpinner.cs" />
     <Compile Include="Library\PackageCache\com.unity.collab-proxy@2.11.3\Editor\Topbar\Topbar.cs" />
     <Compile Include="Library\PackageCache\com.unity.collab-proxy@2.11.3\Editor\AssetMenu\HierarchyViewAssetMenu.cs" />
-    <Compile Include="Library\PackageCache\com.unity.collab-proxy@2.11.3\Editor\UI\Errors\ErrorsListHeaderState.cs" />
     <Compile Include="Library\PackageCache\com.unity.collab-proxy@2.11.3\Editor\UI\DialogWithCheckBox_Legacy.cs" />
     <Compile Include="Library\PackageCache\com.unity.collab-proxy@2.11.3\Editor\Views\ApplyShelveWithConflictsQuestionerBuilder.cs" />
+    <Compile Include="Library\PackageCache\com.unity.collab-proxy@2.11.3\Editor\UI\Errors\ErrorsListHeaderState.cs" />
     <Compile Include="Library\PackageCache\com.unity.collab-proxy@2.11.3\Editor\CloudDrive\ShareWorkspace\ShareWorkspaceDialog.cs" />
     <Compile Include="Library\PackageCache\com.unity.collab-proxy@2.11.3\Editor\Gluon\UpdateReport\UpdateReportDialog.cs" />
     <Compile Include="Library\PackageCache\com.unity.collab-proxy@2.11.3\Editor\Views\Branch\BranchesTab_Operations.cs" />
@@ -505,8 +505,8 @@
     <Compile Include="Library\PackageCache\com.unity.collab-proxy@2.11.3\Editor\UI\GetWindowIfOpened.cs" />
     <Compile Include="Library\PackageCache\com.unity.collab-proxy@2.11.3\Editor\Views\SelectNewCodeReviewBehavior.cs" />
     <Compile Include="Library\PackageCache\com.unity.collab-proxy@2.11.3\Editor\Tool\LaunchTool.cs" />
-    <Compile Include="Library\PackageCache\com.unity.collab-proxy@2.11.3\Editor\Views\PendingChanges\ChangeCategoryTreeViewItem.cs" />
     <Compile Include="Library\PackageCache\com.unity.collab-proxy@2.11.3\Editor\Views\Locks\LocksTab.cs" />
+    <Compile Include="Library\PackageCache\com.unity.collab-proxy@2.11.3\Editor\Views\PendingChanges\ChangeCategoryTreeViewItem.cs" />
     <Compile Include="Library\PackageCache\com.unity.collab-proxy@2.11.3\Editor\UVCSToolbar\Headless\HeadlessGluonUpdateProgress.cs" />
     <Compile Include="Library\PackageCache\com.unity.collab-proxy@2.11.3\Editor\Views\Branch\BranchesSelection.cs" />
     <Compile Include="Library\PackageCache\com.unity.collab-proxy@2.11.3\Editor\UI\UIElements\UIElementsExtensions.cs" />

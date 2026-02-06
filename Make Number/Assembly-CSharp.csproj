@@ -63,6 +63,7 @@
     <Compile Include="Assets\Scripts\AdsManager.cs" />
     <Compile Include="Assets\Scripts\CellSelectable.cs" />
     <Compile Include="Assets\Scripts\NoAdsManager.cs" />
+    <Compile Include="Assets\Scripts\SFXData.cs" />
     <Compile Include="Assets\Scripts\IAPManager.cs" />
     <Compile Include="Assets\Scripts\TimerSlider.cs" />
     <Compile Include="Assets\Scripts\ButtonManager.cs" />
@@ -72,6 +73,7 @@
     <Compile Include="Assets\Scripts\InterstitialAdController.cs" />
     <Compile Include="Assets\Scripts\CellData.cs" />
     <Compile Include="Assets\Scripts\BoardManager.cs" />
+    <Compile Include="Assets\Scripts\SFXManager.cs" />
   </ItemGroup>
   <ItemGroup>
     <None Include="Assets\GoogleMobileAds\GoogleMobileAds.Common.dll" />
@@ -408,24 +410,16 @@
       <HintPath>C:\Program Files\Unity\Hub\Editor\2022.3.62f3\Editor\Data\Managed\UnityEngine\UnityEditor.UnityConnectModule.dll</HintPath>
       <Private>False</Private>
     </Reference>
-    <Reference Include="Unity.Collections.LowLevel.ILSupport">
-      <HintPath>Library\PackageCache\com.unity.collections@1.2.4\Unity.Collections.LowLevel.ILSupport\Unity.Collections.LowLevel.ILSupport.dll</HintPath>
-      <Private>False</Private>
-    </Reference>
-    <Reference Include="Unity.VisualScripting.Antlr3.Runtime">
-      <HintPath>Library\PackageCache\com.unity.visualscripting@1.9.4\Runtime\VisualScripting.Flow\Dependencies\NCalc\Unity.VisualScripting.Antlr3.Runtime.dll</HintPath>
-      <Private>False</Private>
-    </Reference>
     <Reference Include="GoogleMobileAds.Common">
       <HintPath>Assets\GoogleMobileAds\GoogleMobileAds.Common.dll</HintPath>
       <Private>False</Private>
     </Reference>
-    <Reference Include="GoogleMobileAds">
-      <HintPath>Assets\GoogleMobileAds\GoogleMobileAds.dll</HintPath>
+    <Reference Include="Unity.Collections.LowLevel.ILSupport">
+      <HintPath>Library\PackageCache\com.unity.collections@1.2.4\Unity.Collections.LowLevel.ILSupport\Unity.Collections.LowLevel.ILSupport.dll</HintPath>
       <Private>False</Private>
     </Reference>
-    <Reference Include="GoogleMobileAds.Unity">
-      <HintPath>Assets\GoogleMobileAds\GoogleMobileAds.Unity.dll</HintPath>
+    <Reference Include="GoogleMobileAds">
+      <HintPath>Assets\GoogleMobileAds\GoogleMobileAds.dll</HintPath>
       <Private>False</Private>
     </Reference>
     <Reference Include="GoogleMobileAds.Core">
@@ -438,6 +432,14 @@
     </Reference>
     <Reference Include="GoogleMobileAds.Ump">
       <HintPath>Assets\GoogleMobileAds\GoogleMobileAds.Ump.dll</HintPath>
+      <Private>False</Private>
+    </Reference>
+    <Reference Include="Unity.VisualScripting.Antlr3.Runtime">
+      <HintPath>Library\PackageCache\com.unity.visualscripting@1.9.4\Runtime\VisualScripting.Flow\Dependencies\NCalc\Unity.VisualScripting.Antlr3.Runtime.dll</HintPath>
+      <Private>False</Private>
+    </Reference>
+    <Reference Include="GoogleMobileAds.Unity">
+      <HintPath>Assets\GoogleMobileAds\GoogleMobileAds.Unity.dll</HintPath>
       <Private>False</Private>
     </Reference>
     <Reference Include="Newtonsoft.Json">
@@ -1030,17 +1032,17 @@
       <Project>{38919E13-DAD5-AE92-BB2E-E2E8F71CF4A5}</Project>
       <Name>Unity.TextMeshPro</Name>
     </ProjectReference>
-    <ProjectReference Include="Unity.2D.Aseprite.Editor.csproj">
-      <Project>{9B4E5A4D-5F3D-8A0B-EDD6-6361419D206E}</Project>
-      <Name>Unity.2D.Aseprite.Editor</Name>
+    <ProjectReference Include="UnityEditor.Purchasing.csproj">
+      <Project>{86E85E4A-B7BB-E88A-9D4F-623554AF8EE4}</Project>
+      <Name>UnityEditor.Purchasing</Name>
     </ProjectReference>
     <ProjectReference Include="Unity.Services.Core.Analytics.csproj">
       <Project>{BEB720CA-CE25-04A0-87AA-9C9898719556}</Project>
       <Name>Unity.Services.Core.Analytics</Name>
     </ProjectReference>
-    <ProjectReference Include="UnityEditor.Purchasing.csproj">
-      <Project>{86E85E4A-B7BB-E88A-9D4F-623554AF8EE4}</Project>
-      <Name>UnityEditor.Purchasing</Name>
+    <ProjectReference Include="Unity.2D.Aseprite.Editor.csproj">
+      <Project>{9B4E5A4D-5F3D-8A0B-EDD6-6361419D206E}</Project>
+      <Name>Unity.2D.Aseprite.Editor</Name>
     </ProjectReference>
     <ProjectReference Include="Unity.Purchasing.csproj">
       <Project>{39D85E60-8987-86E8-5E9D-ABF2188D9CC4}</Project>
@@ -1066,13 +1068,13 @@
       <Project>{30999697-1679-D2B8-A923-4762560E5D1B}</Project>
       <Name>Unity.Purchasing.SecurityStub</Name>
     </ProjectReference>
-    <ProjectReference Include="Unity.Timeline.Editor.csproj">
-      <Project>{252B1CCD-43D4-E1B3-E6D9-C551C2733789}</Project>
-      <Name>Unity.Timeline.Editor</Name>
-    </ProjectReference>
     <ProjectReference Include="Unity.VisualScripting.Shared.Editor.csproj">
       <Project>{A0BB9C6D-222F-F28F-7229-3492A1071915}</Project>
       <Name>Unity.VisualScripting.Shared.Editor</Name>
+    </ProjectReference>
+    <ProjectReference Include="Unity.Timeline.Editor.csproj">
+      <Project>{252B1CCD-43D4-E1B3-E6D9-C551C2733789}</Project>
+      <Name>Unity.Timeline.Editor</Name>
     </ProjectReference>
     <ProjectReference Include="Unity.VisualStudio.Editor.csproj">
       <Project>{C79A00CF-A726-C000-94F1-4FFA5823D705}</Project>
@@ -1086,13 +1088,13 @@
       <Project>{F9281930-BFE0-38DF-3BEC-08D84F053828}</Project>
       <Name>Unity.2D.Animation.Runtime</Name>
     </ProjectReference>
-    <ProjectReference Include="Unity.2D.Tilemap.Extras.csproj">
-      <Project>{595A707B-4AB4-41DB-1740-DF5D2B3A23D3}</Project>
-      <Name>Unity.2D.Tilemap.Extras</Name>
-    </ProjectReference>
     <ProjectReference Include="Unity.VisualScripting.Core.Editor.csproj">
       <Project>{77BE15A8-5D7D-27AC-668A-6A76FA5EEBC0}</Project>
       <Name>Unity.VisualScripting.Core.Editor</Name>
+    </ProjectReference>
+    <ProjectReference Include="Unity.2D.Tilemap.Extras.csproj">
+      <Project>{595A707B-4AB4-41DB-1740-DF5D2B3A23D3}</Project>
+      <Name>Unity.2D.Tilemap.Extras</Name>
     </ProjectReference>
     <ProjectReference Include="Unity.VisualScripting.Flow.Editor.csproj">
       <Project>{0688E2C2-821E-417E-5B7E-3F4FA33883C3}</Project>

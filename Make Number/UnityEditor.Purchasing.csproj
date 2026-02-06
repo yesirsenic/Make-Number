@@ -101,8 +101,8 @@
     <Compile Include="Library\PackageCache\com.unity.purchasing@5.1.2\Editor\ServiceProjectSettings\UI\Views\Obfuscator\AbstractObfuscatorSection.cs" />
     <Compile Include="Library\PackageCache\com.unity.purchasing@5.1.2\Editor\Analytics\Entity\EventSourceMenuItems.cs" />
     <Compile Include="Library\PackageCache\com.unity.purchasing@5.1.2\Editor\ServiceProjectSettings\UI\Views\PlatformsAndStoresServiceSettingsBlock.cs" />
-    <Compile Include="Library\PackageCache\com.unity.purchasing@5.1.2\Editor\Analytics\Entity\GameServices\GameServicesEventActions.cs" />
     <Compile Include="Library\PackageCache\com.unity.purchasing@5.1.2\Editor\ServiceProjectSettings\Service\Networking\GoogleConfigurationWebRequests.cs" />
+    <Compile Include="Library\PackageCache\com.unity.purchasing@5.1.2\Editor\Analytics\Entity\GameServices\GameServicesEventActions.cs" />
     <Compile Include="Library\PackageCache\com.unity.purchasing@5.1.2\Editor\Analytics\Entity\EventSources.cs" />
     <Compile Include="Library\PackageCache\com.unity.purchasing@5.1.2\Editor\Analytics\Entity\EventActions.cs" />
     <Compile Include="Library\PackageCache\com.unity.purchasing@5.1.2\Editor\Importer.cs" />
@@ -143,8 +143,8 @@
     <Compile Include="Library\PackageCache\com.unity.purchasing@5.1.2\Editor\Analytics\PackageKey\NonGameServicesAnalyticsPackageKeyHolder.cs" />
     <Compile Include="Library\PackageCache\com.unity.purchasing@5.1.2\Editor\ServiceProjectSettings\Entity\GooglePlayRevenueTrackingKeyState.cs" />
     <Compile Include="Library\PackageCache\com.unity.purchasing@5.1.2\Editor\ProductCatalogEditor.cs" />
-    <Compile Include="Library\PackageCache\com.unity.purchasing@5.1.2\Editor\Obfuscation\Service\TangleObfuscator.cs" />
     <Compile Include="Library\PackageCache\com.unity.purchasing@5.1.2\Editor\AssemblyInfo.cs" />
+    <Compile Include="Library\PackageCache\com.unity.purchasing@5.1.2\Editor\Obfuscation\Service\TangleObfuscator.cs" />
     <Compile Include="Library\PackageCache\com.unity.purchasing@5.1.2\Editor\Analytics\Helpers\GenericEditorClickCheckboxEventSenderHelpers.cs" />
     <Compile Include="Library\PackageCache\com.unity.purchasing@5.1.2\Editor\ServiceProjectSettings\UI\Views\ImageHelper.cs" />
     <Compile Include="Library\PackageCache\com.unity.purchasing@5.1.2\Editor\Analytics\Entity\EventUINames.cs" />

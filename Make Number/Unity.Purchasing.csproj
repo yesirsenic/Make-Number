@@ -68,10 +68,10 @@
     <Compile Include="Library\PackageCache\com.unity.purchasing@5.1.2\Runtime\Purchasing\Core\Product\AppleAppStore\Extensions\UseCases\SetStorePromotionOrderUseCase.cs" />
     <Compile Include="Library\PackageCache\com.unity.purchasing@5.1.2\Runtime\Purchasing\Core\Retries\RetryPolicies\TimeLimitRetryPolicy.cs" />
     <Compile Include="Library\PackageCache\com.unity.purchasing@5.1.2\Runtime\Purchasing\Legacy\Extensions\ExtensionProvider.cs" />
-    <Compile Include="Library\PackageCache\com.unity.purchasing@5.1.2\Runtime\Purchasing\Core\Product\AppleAppStore\Extensions\UseCases\Interfaces\IFetchStorePromotionOrderUseCase.cs" />
+    <Compile Include="Library\PackageCache\com.unity.purchasing@5.1.2\Runtime\Purchasing\Core\Store\StoreWrapper.cs" />
     <Compile Include="Library\PackageCache\com.unity.purchasing@5.1.2\Runtime\Purchasing\Core\Product\ProductServiceProvider.cs" />
     <Compile Include="Library\PackageCache\com.unity.purchasing@5.1.2\Runtime\Purchasing\Core\Product\AppleAppStore\Extensions\UseCases\Interfaces\IGetIntroductoryPriceDictionaryUseCase.cs" />
-    <Compile Include="Library\PackageCache\com.unity.purchasing@5.1.2\Runtime\Purchasing\Core\Store\StoreWrapper.cs" />
+    <Compile Include="Library\PackageCache\com.unity.purchasing@5.1.2\Runtime\Purchasing\Core\Product\AppleAppStore\Extensions\UseCases\Interfaces\IFetchStorePromotionOrderUseCase.cs" />
     <Compile Include="Library\PackageCache\com.unity.purchasing@5.1.2\Runtime\Purchasing\Core\Product\Models\ProductFetchFailed.cs" />
     <Compile Include="Library\PackageCache\com.unity.purchasing@5.1.2\Runtime\Purchasing\Core\Purchasing\PurchaseUseCaseFactory.cs" />
     <Compile Include="Library\PackageCache\com.unity.purchasing@5.1.2\Runtime\Purchasing\Core\Product\Interfaces\Callbacks\IStoreProductsCallback.cs" />
@@ -81,11 +81,11 @@
     <Compile Include="Library\PackageCache\com.unity.purchasing@5.1.2\Runtime\Purchasing\Core\Purchasing\Models\Interfaces\IOrderInfo.cs" />
     <Compile Include="Library\PackageCache\com.unity.purchasing@5.1.2\Runtime\Purchasing\Stores\Android\GooglePlay\Exceptions\GoogleFetchProductException.cs" />
     <Compile Include="Library\PackageCache\com.unity.purchasing@5.1.2\Runtime\Purchasing\Utilities\ProductDefinitionExtensions.cs" />
+    <Compile Include="Library\PackageCache\com.unity.purchasing@5.1.2\Runtime\Purchasing\Core\Store\Interfaces\IStoreConnectionStateService.cs" />
     <Compile Include="Library\PackageCache\com.unity.purchasing@5.1.2\Runtime\Purchasing\Core\Store\AppleAppStore\Extensions\UseCases\Interfaces\ISetAppAccountTokenUseCase.cs" />
     <Compile Include="Library\PackageCache\com.unity.purchasing@5.1.2\Runtime\Purchasing\PayoutType.cs" />
-    <Compile Include="Library\PackageCache\com.unity.purchasing@5.1.2\Runtime\Purchasing\Core\Purchasing\Models\Interfaces\IAppleOrderInfo.cs" />
-    <Compile Include="Library\PackageCache\com.unity.purchasing@5.1.2\Runtime\Purchasing\Core\Store\Interfaces\IStoreConnectionStateService.cs" />
     <Compile Include="Library\PackageCache\com.unity.purchasing@5.1.2\Runtime\Purchasing\Core\Purchasing\AppleAppStore\Extensions\UseCases\AppleRefreshAppReceiptUseCase.cs" />
+    <Compile Include="Library\PackageCache\com.unity.purchasing@5.1.2\Runtime\Purchasing\Core\Purchasing\Models\Interfaces\IAppleOrderInfo.cs" />
     <Compile Include="Library\PackageCache\com.unity.purchasing@5.1.2\Runtime\Purchasing\Extension\Interfaces\IProductCache.cs" />
     <Compile Include="Library\PackageCache\com.unity.purchasing@5.1.2\Runtime\Purchasing\Stores\Android\AAR\UnityActivity.cs" />
     <Compile Include="Library\PackageCache\com.unity.purchasing@5.1.2\Runtime\Purchasing\Core\Purchasing\AppleAppStore\Extensions\UseCases\ContinuePromotionalPurchasesUseCase.cs" />
@@ -96,29 +96,29 @@
     <Compile Include="Library\PackageCache\com.unity.purchasing@5.1.2\Runtime\Purchasing\Utilities\ProductTypeExtensions.cs" />
     <Compile Include="Library\PackageCache\com.unity.purchasing@5.1.2\Runtime\Purchasing\Stores\Android\GooglePlay\AAR\Interfaces\IGooglePlayStoreService.cs" />
     <Compile Include="Library\PackageCache\com.unity.purchasing@5.1.2\Runtime\Purchasing\Legacy\Configurations\ConfigurationProvider.cs" />
+    <Compile Include="Library\PackageCache\com.unity.purchasing@5.1.2\Runtime\Purchasing\DependencyInjection\DependencyInjectionService.cs" />
     <Compile Include="Library\PackageCache\com.unity.purchasing@5.1.2\Runtime\Purchasing\DependencyInjection\IDependencyInjectionService.cs" />
     <Compile Include="Library\PackageCache\com.unity.purchasing@5.1.2\Runtime\Purchasing\Core\Purchasing\Interfaces\UseCases\IFetchPurchasesUseCase.cs" />
-    <Compile Include="Library\PackageCache\com.unity.purchasing@5.1.2\Runtime\Purchasing\DependencyInjection\DependencyInjectionService.cs" />
     <Compile Include="Library\PackageCache\com.unity.purchasing@5.1.2\Runtime\Purchasing\Core\Purchasing\Exceptions\InvalidCartItemException.cs" />
     <Compile Include="Library\PackageCache\com.unity.purchasing@5.1.2\Runtime\Purchasing\Utilities\UnityUtilContainer.cs" />
     <Compile Include="Library\PackageCache\com.unity.purchasing@5.1.2\Runtime\Purchasing\Legacy\Interfaces\IStoreListener.cs" />
     <Compile Include="Library\PackageCache\com.unity.purchasing@5.1.2\Runtime\Purchasing\Core\Purchasing\Interfaces\Callbacks\IStorePurchaseCallback.cs" />
+    <Compile Include="Library\PackageCache\com.unity.purchasing@5.1.2\Runtime\Purchasing\Core\Product\ExtensibleProductService.cs" />
     <Compile Include="Library\PackageCache\com.unity.purchasing@5.1.2\Runtime\Purchasing\Extension\ProductCatalog.cs" />
     <Compile Include="Library\PackageCache\com.unity.purchasing@5.1.2\Runtime\Purchasing\Telemetry\Diagnostics\TelemetryDiagnosticNames.cs" />
     <Compile Include="Library\PackageCache\com.unity.purchasing@5.1.2\Runtime\Purchasing\Core\Store\StoreServiceDependencyInjector.cs" />
-    <Compile Include="Library\PackageCache\com.unity.purchasing@5.1.2\Runtime\Purchasing\Core\Store\UseCases\StoreConnectUseCaseFactory.cs" />
     <Compile Include="Library\PackageCache\com.unity.purchasing@5.1.2\Runtime\Purchasing\Core\Purchasing\Interfaces\Callbacks\IOnEntitlementRevokedCallback.cs" />
-    <Compile Include="Library\PackageCache\com.unity.purchasing@5.1.2\Runtime\Purchasing\Core\Product\ExtensibleProductService.cs" />
+    <Compile Include="Library\PackageCache\com.unity.purchasing@5.1.2\Runtime\Purchasing\Core\Store\UseCases\StoreConnectUseCaseFactory.cs" />
     <Compile Include="Library\PackageCache\com.unity.purchasing@5.1.2\Runtime\Purchasing\AssemblyInfo.cs" />
     <Compile Include="Library\PackageCache\com.unity.purchasing@5.1.2\Runtime\Purchasing\ErrorMessages.cs" />
-    <Compile Include="Library\PackageCache\com.unity.purchasing@5.1.2\Runtime\Purchasing\Core\Purchasing\AppleAppStore\AppleAppStoreCartValidator.cs" />
     <Compile Include="Library\PackageCache\com.unity.purchasing@5.1.2\Runtime\Purchasing\Stores\Android\GooglePlay\GooglePlayReplacementMode.cs" />
+    <Compile Include="Library\PackageCache\com.unity.purchasing@5.1.2\Runtime\Purchasing\Core\Purchasing\AppleAppStore\AppleAppStoreCartValidator.cs" />
     <Compile Include="Library\PackageCache\com.unity.purchasing@5.1.2\Runtime\Purchasing\Core\Retries\Interfaces\IRetryableRequestFailureDescription.cs" />
-    <Compile Include="Library\PackageCache\com.unity.purchasing@5.1.2\Runtime\Purchasing\Core\Purchasing\AppleAppStore\Extensions\UseCases\AppleRestoreTransactionsUseCase.cs" />
     <Compile Include="Library\PackageCache\com.unity.purchasing@5.1.2\Runtime\Purchasing\Core\Purchasing\AppleAppStore\Extensions\Interfaces\IAppleStoreExtendedPurchaseService.cs" />
     <Compile Include="Library\PackageCache\com.unity.purchasing@5.1.2\Runtime\Purchasing\ProductCollection.cs" />
-    <Compile Include="Library\PackageCache\com.unity.purchasing@5.1.2\Runtime\Purchasing\Core\Product\Models\ProductFetchRequest.cs" />
+    <Compile Include="Library\PackageCache\com.unity.purchasing@5.1.2\Runtime\Purchasing\Core\Purchasing\AppleAppStore\Extensions\UseCases\AppleRestoreTransactionsUseCase.cs" />
     <Compile Include="Library\PackageCache\com.unity.purchasing@5.1.2\Runtime\Purchasing\Core\Product\Interfaces\IProductServiceFactoryManagerInjectionPoint.cs" />
+    <Compile Include="Library\PackageCache\com.unity.purchasing@5.1.2\Runtime\Purchasing\Core\Product\Models\ProductFetchRequest.cs" />
     <Compile Include="Library\PackageCache\com.unity.purchasing@5.1.2\Runtime\Purchasing\Core\Purchasing\Android\GooglePlay\Extensions\GooglePlayStoreExtendedPurchaseService.cs" />
     <Compile Include="Library\PackageCache\com.unity.purchasing@5.1.2\Runtime\Purchasing\Core\Purchasing\Models\FailedOrder.cs" />
     <Compile Include="Library\PackageCache\com.unity.purchasing@5.1.2\Runtime\Purchasing\Core\Purchasing\Models\DeferredOrder.cs" />
@@ -161,9 +161,9 @@
     <Compile Include="Library\PackageCache\com.unity.purchasing@5.1.2\Runtime\Purchasing\Core\Purchasing\Interfaces\UseCases\IPurchaseUseCase.cs" />
     <Compile Include="Library\PackageCache\com.unity.purchasing@5.1.2\Runtime\Purchasing\Legacy\Configurations\Interfaces\IStoreConfiguration.cs" />
     <Compile Include="Library\PackageCache\com.unity.purchasing@5.1.2\Runtime\Purchasing\Stores\AppleAppStore\GetAppleProductMetadataExtension.cs" />
+    <Compile Include="Library\PackageCache\com.unity.purchasing@5.1.2\Runtime\Purchasing\StoreSpecificIds.cs" />
     <Compile Include="Library\PackageCache\com.unity.purchasing@5.1.2\Runtime\Purchasing\Stores\Android\GooglePlay\AAR\Interfaces\IGoogleBillingResult.cs" />
     <Compile Include="Library\PackageCache\com.unity.purchasing@5.1.2\Runtime\Purchasing\DependencyInjection\DependencyInjectionException.cs" />
-    <Compile Include="Library\PackageCache\com.unity.purchasing@5.1.2\Runtime\Purchasing\StoreSpecificIds.cs" />
     <Compile Include="Library\PackageCache\com.unity.purchasing@5.1.2\Runtime\Purchasing\Legacy\Extensions\Interfaces\IGooglePlayStoreExtensions.cs" />
     <Compile Include="Library\PackageCache\com.unity.purchasing@5.1.2\Runtime\Purchasing\Core\Retries\RetryPolicyInformation.cs" />
     <Compile Include="Library\PackageCache\com.unity.purchasing@5.1.2\Runtime\Purchasing\Utilities\UnifiedReceiptFormatter.cs" />
@@ -180,8 +180,8 @@
     <Compile Include="Library\PackageCache\com.unity.purchasing@5.1.2\Runtime\Purchasing\Core\Purchasing\Interfaces\Callbacks\IStorePurchaseConfirmCallback.cs" />
     <Compile Include="Library\PackageCache\com.unity.purchasing@5.1.2\Runtime\Purchasing\Core\Purchasing\Interfaces\CartValidation\ICartValidator.cs" />
     <Compile Include="Library\PackageCache\com.unity.purchasing@5.1.2\Runtime\Purchasing\Core\Purchasing\Android\GooglePlay\Extensions\UseCases\Interfaces\IGooglePlayGetGooglePurchaseUseCase.cs" />
-    <Compile Include="Library\PackageCache\com.unity.purchasing@5.1.2\Runtime\Purchasing\Core\Product\Interfaces\IProductService.cs" />
     <Compile Include="Library\PackageCache\com.unity.purchasing@5.1.2\Runtime\Purchasing\Telemetry\Diagnostics\TelemetryDiagnostics.cs" />
+    <Compile Include="Library\PackageCache\com.unity.purchasing@5.1.2\Runtime\Purchasing\Core\Product\Interfaces\IProductService.cs" />
     <Compile Include="Library\PackageCache\com.unity.purchasing@5.1.2\Runtime\Purchasing\Legacy\Extensions\Interfaces\IExtensionProvider.cs" />
     <Compile Include="Library\PackageCache\com.unity.purchasing@5.1.2\Runtime\Purchasing\Core\Purchasing\Android\GooglePlay\UseCases\GooglePlayPurchaseUseCase.cs" />
     <Compile Include="Library\PackageCache\com.unity.purchasing@5.1.2\Runtime\Purchasing\Core\Store\AppleAppStore\Extensions\UseCases\Interfaces\IClearAppleTransactionLogsUseCase.cs" />
@@ -196,13 +196,13 @@
     <Compile Include="Library\PackageCache\com.unity.purchasing@5.1.2\Runtime\Purchasing\Legacy\Extensions\AppleExtensions.cs" />
     <Compile Include="Library\PackageCache\com.unity.purchasing@5.1.2\Runtime\Purchasing\Core\Retries\Interfaces\IRetryPolicy.cs" />
     <Compile Include="Library\PackageCache\com.unity.purchasing@5.1.2\Runtime\Purchasing\Core\Purchasing\UseCases\CheckEntitlementUseCase.cs" />
-    <Compile Include="Library\PackageCache\com.unity.purchasing@5.1.2\Runtime\Purchasing\Telemetry\Metrics\Interfaces\ITelemetryMetricsInstanceWrapper.cs" />
     <Compile Include="Library\PackageCache\com.unity.purchasing@5.1.2\Runtime\Purchasing\Core\Product\AppleAppStore\Extensions\UseCases\Interfaces\IFetchStorePromotionVisibilityUseCase.cs" />
+    <Compile Include="Library\PackageCache\com.unity.purchasing@5.1.2\Runtime\Purchasing\Telemetry\Metrics\Interfaces\ITelemetryMetricsInstanceWrapper.cs" />
     <Compile Include="Library\PackageCache\com.unity.purchasing@5.1.2\Runtime\Purchasing\Legacy\Interfaces\IDetailedStoreListener.cs" />
-    <Compile Include="Library\PackageCache\com.unity.purchasing@5.1.2\Runtime\Purchasing\Core\Store\Android\GooglePlay\Extensions\UseCases\Interfaces\IGooglePlayStoreConnectionUseCase.cs" />
     <Compile Include="Library\PackageCache\com.unity.purchasing@5.1.2\Runtime\Purchasing\Stores\BaseStore\Exceptions\FetchProductsException.cs" />
-    <Compile Include="Library\PackageCache\com.unity.purchasing@5.1.2\Runtime\Purchasing\Core\Purchasing\Models\DeferredPaymentUntilRenewalDateOrder.cs" />
+    <Compile Include="Library\PackageCache\com.unity.purchasing@5.1.2\Runtime\Purchasing\Core\Store\Android\GooglePlay\Extensions\UseCases\Interfaces\IGooglePlayStoreConnectionUseCase.cs" />
     <Compile Include="Library\PackageCache\com.unity.purchasing@5.1.2\Runtime\Purchasing\PayoutDefinition.cs" />
+    <Compile Include="Library\PackageCache\com.unity.purchasing@5.1.2\Runtime\Purchasing\Core\Purchasing\Models\DeferredPaymentUntilRenewalDateOrder.cs" />
     <Compile Include="Library\PackageCache\com.unity.purchasing@5.1.2\Runtime\Purchasing\Core\Purchasing\Models\OwnershipType.cs" />
     <Compile Include="Library\PackageCache\com.unity.purchasing@5.1.2\Runtime\Purchasing\Core\Purchasing\Exceptions\InvalidCartException.cs" />
     <Compile Include="Library\PackageCache\com.unity.purchasing@5.1.2\Runtime\Purchasing\Legacy\Extensions\GoogleExtensions.cs" />
@@ -225,8 +225,8 @@
     <Compile Include="Library\PackageCache\com.unity.purchasing@5.1.2\Runtime\Purchasing\Core\Product\AppleAppStore\Extensions\UseCases\Interfaces\ISetStorePromotionVisibilityUseCase.cs" />
     <Compile Include="Library\PackageCache\com.unity.purchasing@5.1.2\Runtime\Purchasing\Core\Store\Interfaces\IStoreServiceFactoryManagerInjectionPoint.cs" />
     <Compile Include="Library\PackageCache\com.unity.purchasing@5.1.2\Runtime\Purchasing\Extension\Interfaces\IStore.cs" />
-    <Compile Include="Library\PackageCache\com.unity.purchasing@5.1.2\Runtime\Purchasing\Core\Purchasing\Models\AppleStoreProductType.cs" />
     <Compile Include="Library\PackageCache\com.unity.purchasing@5.1.2\Runtime\Purchasing\Core\Purchasing\Models\Interfaces\IGoogleOrderInfo.cs" />
+    <Compile Include="Library\PackageCache\com.unity.purchasing@5.1.2\Runtime\Purchasing\Core\Purchasing\Models\AppleStoreProductType.cs" />
     <Compile Include="Library\PackageCache\com.unity.purchasing@5.1.2\Runtime\Purchasing\Core\Purchasing\AppleAppStore\Extensions\UseCases\Interfaces\ISimulateAskToBuyUseCase.cs" />
     <Compile Include="Library\PackageCache\com.unity.purchasing@5.1.2\Runtime\Purchasing\Stores\Android\GooglePlay\Interfaces\IGooglePlayStore.cs" />
     <Compile Include="Library\PackageCache\com.unity.purchasing@5.1.2\Runtime\Purchasing\Core\Store\AppleAppStore\Extensions\Interfaces\IAppleStoreExtendedService.cs" />
@@ -251,12 +251,12 @@
     <Compile Include="Library\PackageCache\com.unity.purchasing@5.1.2\Runtime\Purchasing\Core\Purchasing\Models\Cart.cs" />
     <Compile Include="Library\PackageCache\com.unity.purchasing@5.1.2\Runtime\Purchasing\Core\Retries\RetryPolicies\AggregateRetryPolicy.cs" />
     <Compile Include="Library\PackageCache\com.unity.purchasing@5.1.2\Runtime\Purchasing\Stores\Android\Interfaces\IUnityCallback.cs" />
-    <Compile Include="Library\PackageCache\com.unity.purchasing@5.1.2\Runtime\Purchasing\Legacy\InitializationFailureReason.cs" />
     <Compile Include="Library\PackageCache\com.unity.purchasing@5.1.2\Runtime\Purchasing\Core\Purchasing\UseCases\OnEntitlementRevokedUseCase.cs" />
+    <Compile Include="Library\PackageCache\com.unity.purchasing@5.1.2\Runtime\Purchasing\Legacy\InitializationFailureReason.cs" />
     <Compile Include="Library\PackageCache\com.unity.purchasing@5.1.2\Runtime\Purchasing\Core\Purchasing\ExtensiblePurchaseService.cs" />
     <Compile Include="Library\PackageCache\com.unity.purchasing@5.1.2\Runtime\Purchasing\Telemetry\Diagnostics\TelemetryDiagnosticsInstanceWrapper.cs" />
-    <Compile Include="Library\PackageCache\com.unity.purchasing@5.1.2\Runtime\Purchasing\Core\Store\Android\GooglePlay\Extensions\Interfaces\IGooglePlayStoreExtendedService.cs" />
     <Compile Include="Library\PackageCache\com.unity.purchasing@5.1.2\Runtime\Purchasing\Stores\Android\GooglePlay\AAR\Interfaces\IQueryProductDetailsService.cs" />
+    <Compile Include="Library\PackageCache\com.unity.purchasing@5.1.2\Runtime\Purchasing\Core\Store\Android\GooglePlay\Extensions\Interfaces\IGooglePlayStoreExtendedService.cs" />
     <Compile Include="Library\PackageCache\com.unity.purchasing@5.1.2\Runtime\Purchasing\Settings\IAPSettings.cs" />
     <Compile Include="Library\PackageCache\com.unity.purchasing@5.1.2\Runtime\Purchasing\Stores\Android\AndroidStore.cs" />
     <Compile Include="Library\PackageCache\com.unity.purchasing@5.1.2\Runtime\Purchasing\Core\Retries\AsyncDelayer.cs" />
@@ -264,8 +264,8 @@
     <Compile Include="Library\PackageCache\com.unity.purchasing@5.1.2\Runtime\Purchasing\Core\Purchasing\PurchaseServiceProvider.cs" />
     <Compile Include="Library\PackageCache\com.unity.purchasing@5.1.2\Runtime\Purchasing\Telemetry\Metrics\TelemetryMetricTypes.cs" />
     <Compile Include="Library\PackageCache\com.unity.purchasing@5.1.2\Runtime\Purchasing\Core\Retries\Interfaces\IAsyncDelayer.cs" />
-    <Compile Include="Library\PackageCache\com.unity.purchasing@5.1.2\Runtime\Purchasing\Core\Product\ProductServiceFactoryManager.cs" />
     <Compile Include="Library\PackageCache\com.unity.purchasing@5.1.2\Runtime\Purchasing\Core\Product\AppleAppStore\Extensions\UseCases\Interfaces\ISetStorePromotionOrderUseCase.cs" />
+    <Compile Include="Library\PackageCache\com.unity.purchasing@5.1.2\Runtime\Purchasing\Core\Product\ProductServiceFactoryManager.cs" />
     <Compile Include="Library\PackageCache\com.unity.purchasing@5.1.2\Runtime\Purchasing\Core\Store\StoreServiceFactoryManager.cs" />
     <Compile Include="Library\PackageCache\com.unity.purchasing@5.1.2\Runtime\Purchasing\Core\Purchasing\Android\GooglePlay\Interfaces\Callbacks\IGooglePlayChangeSubscriptionCallback.cs" />
     <Compile Include="Library\PackageCache\com.unity.purchasing@5.1.2\Runtime\Purchasing\Core\Purchasing\Android\GooglePlay\Extensions\UseCases\GooglePlayRestoreTransactionUseCase.cs" />
@@ -278,10 +278,10 @@
     <Compile Include="Library\PackageCache\com.unity.purchasing@5.1.2\Runtime\Purchasing\Core\Purchasing\Models\PurchasesFetchFailureDescription.cs" />
     <Compile Include="Library\PackageCache\com.unity.purchasing@5.1.2\Runtime\Purchasing\Stores\Android\GooglePlay\GetGoogleProductMetadataExtension.cs" />
     <Compile Include="Library\PackageCache\com.unity.purchasing@5.1.2\Runtime\Purchasing\Legacy\PurchaseProcessingResult.cs" />
+    <Compile Include="Library\PackageCache\com.unity.purchasing@5.1.2\Runtime\Purchasing\Core\Purchasing\Android\GooglePlay\Interfaces\UseCases\IGooglePlayChangeSubscriptionUseCase.cs" />
     <Compile Include="Library\PackageCache\com.unity.purchasing@5.1.2\Runtime\Purchasing\Extension\Interfaces\IBaseCatalogProvider.cs" />
     <Compile Include="Library\PackageCache\com.unity.purchasing@5.1.2\Runtime\Purchasing\Core\Product\Models\ProductFetchFailureReason.cs" />
     <Compile Include="Library\PackageCache\com.unity.purchasing@5.1.2\Runtime\Purchasing\Core\Retries\RetryPolicies\MaximumNumberOfAttemptsRetryPolicy.cs" />
-    <Compile Include="Library\PackageCache\com.unity.purchasing@5.1.2\Runtime\Purchasing\Core\Purchasing\Android\GooglePlay\Interfaces\UseCases\IGooglePlayChangeSubscriptionUseCase.cs" />
     <Compile Include="Library\PackageCache\com.unity.purchasing@5.1.2\Runtime\Purchasing\Telemetry\Metrics\Interfaces\ITelemetryMetricEvent.cs" />
     <Compile Include="Library\PackageCache\com.unity.purchasing@5.1.2\Runtime\Purchasing\Analytics\Interfaces\IAnalyticsClient.cs" />
     <Compile Include="Library\PackageCache\com.unity.purchasing@5.1.2\Runtime\Purchasing\Telemetry\Diagnostics\Interfaces\ITelemetryDiagnosticsInstanceWrapper.cs" />
@@ -304,11 +304,11 @@
     <Compile Include="Library\PackageCache\com.unity.purchasing@5.1.2\Runtime\Purchasing\Core\Product\Android\ScriptingUnityCallback.cs" />
     <Compile Include="Library\PackageCache\com.unity.purchasing@5.1.2\Runtime\Purchasing\Core\Purchasing\Models\Entitlement.cs" />
     <Compile Include="Library\PackageCache\com.unity.purchasing@5.1.2\Runtime\Purchasing\Legacy\UnityPurchasing.cs" />
+    <Compile Include="Library\PackageCache\com.unity.purchasing@5.1.2\Runtime\Purchasing\Stores\AppStore.cs" />
     <Compile Include="Library\PackageCache\com.unity.purchasing@5.1.2\Runtime\Purchasing\Core\Exceptions\StoreCreationException.cs" />
     <Compile Include="Library\PackageCache\com.unity.purchasing@5.1.2\Runtime\Purchasing\Telemetry\Diagnostics\Interfaces\ITelemetryDiagnostics.cs" />
     <Compile Include="Library\PackageCache\com.unity.purchasing@5.1.2\Runtime\Purchasing\Core\Purchasing\UseCases\ConfirmOrderUseCase.cs" />
     <Compile Include="Library\PackageCache\com.unity.purchasing@5.1.2\Runtime\Purchasing\Core\Store\Interfaces\IStoreManagerFactoryInjectionPoint.cs" />
-    <Compile Include="Library\PackageCache\com.unity.purchasing@5.1.2\Runtime\Purchasing\Stores\AppStore.cs" />
     <Compile Include="Library\PackageCache\com.unity.purchasing@5.1.2\Runtime\Purchasing\Core\Purchasing\AppleAppStore\Extensions\AppleStoreExtendedPurchaseService.cs" />
     <Compile Include="Library\PackageCache\com.unity.purchasing@5.1.2\Runtime\Purchasing\Stores\Helpers\SelectedAndroidStoreHelper.cs" />
     <Compile Include="Library\PackageCache\com.unity.purchasing@5.1.2\Runtime\Purchasing\Core\Purchasing\Models\OfferType.cs" />
@@ -319,8 +319,8 @@
     <Compile Include="Library\PackageCache\com.unity.purchasing@5.1.2\Runtime\Purchasing\Telemetry\Metrics\TelemetryMetricDefinitions.cs" />
     <Compile Include="Library\PackageCache\com.unity.purchasing@5.1.2\Runtime\Purchasing\Core\UnityIAPServices.cs" />
     <Compile Include="Library\PackageCache\com.unity.purchasing@5.1.2\Runtime\Purchasing\Core\Store\AppleAppStore\Extensions\UseCases\SetAppAccountTokenUseCase.cs" />
-    <Compile Include="Library\PackageCache\com.unity.purchasing@5.1.2\Runtime\Purchasing\Stores\Android\AAR\AndroidJavaObjectExtensions.cs" />
     <Compile Include="Library\PackageCache\com.unity.purchasing@5.1.2\Runtime\Purchasing\Core\Purchasing\UseCases\FetchPurchasesUseCase.cs" />
+    <Compile Include="Library\PackageCache\com.unity.purchasing@5.1.2\Runtime\Purchasing\Stores\Android\AAR\AndroidJavaObjectExtensions.cs" />
     <Compile Include="Library\PackageCache\com.unity.purchasing@5.1.2\Runtime\Purchasing\Core\Store\Interfaces\UseCases\IStoreConnectUseCase.cs" />
     <Compile Include="Library\PackageCache\com.unity.purchasing@5.1.2\Runtime\Purchasing\Core\Store\AppleAppStore\AppleStoreExtendedService.cs" />
     <Compile Include="Library\PackageCache\com.unity.purchasing@5.1.2\Runtime\Purchasing\Core\Purchasing\AppleAppStore\Extensions\UseCases\Interfaces\IRefreshAppReceiptUseCase.cs" />
@@ -334,24 +334,24 @@
     <Compile Include="Library\PackageCache\com.unity.purchasing@5.1.2\Runtime\Purchasing\Extension\Store.cs" />
     <Compile Include="Library\PackageCache\com.unity.purchasing@5.1.2\Runtime\Purchasing\Product.cs" />
     <Compile Include="Library\PackageCache\com.unity.purchasing@5.1.2\Runtime\Purchasing\Stores\AppleAppStore\Interfaces\INativeAppleStore.cs" />
-    <Compile Include="Library\PackageCache\com.unity.purchasing@5.1.2\Runtime\Purchasing\Core\Purchasing\AppleAppStore\Extensions\UseCases\Interfaces\IContinuePromotionalPurchasesUseCase.cs" />
     <Compile Include="Library\PackageCache\com.unity.purchasing@5.1.2\Runtime\Purchasing\Core\Product\AppleAppStore\Extensions\UseCases\GetProductDetailsUseCase.cs" />
+    <Compile Include="Library\PackageCache\com.unity.purchasing@5.1.2\Runtime\Purchasing\Core\Purchasing\AppleAppStore\Extensions\UseCases\Interfaces\IContinuePromotionalPurchasesUseCase.cs" />
     <Compile Include="Library\PackageCache\com.unity.purchasing@5.1.2\Runtime\Purchasing\Legacy\Interfaces\IStoreController.cs" />
     <Compile Include="Library\PackageCache\com.unity.purchasing@5.1.2\Runtime\Purchasing\Telemetry\Metrics\TelemetryMetricEvent.cs" />
-    <Compile Include="Library\PackageCache\com.unity.purchasing@5.1.2\Runtime\Purchasing\Core\Purchasing\Models\ConfirmOrderRequest.cs" />
-    <Compile Include="Library\PackageCache\com.unity.purchasing@5.1.2\Runtime\Purchasing\Legacy\StandardPurchasingModule.cs" />
     <Compile Include="Library\PackageCache\com.unity.purchasing@5.1.2\Runtime\Purchasing\Legacy\Configurations\StoreConfiguration.cs" />
+    <Compile Include="Library\PackageCache\com.unity.purchasing@5.1.2\Runtime\Purchasing\Legacy\StandardPurchasingModule.cs" />
     <Compile Include="Library\PackageCache\com.unity.purchasing@5.1.2\Runtime\Purchasing\Core\Store\StoreConnectionStateService.cs" />
+    <Compile Include="Library\PackageCache\com.unity.purchasing@5.1.2\Runtime\Purchasing\Core\Purchasing\Models\ConfirmOrderRequest.cs" />
     <Compile Include="Library\PackageCache\com.unity.purchasing@5.1.2\Runtime\Purchasing\Analytics\Interfaces\IAnalyticsAdapter.cs" />
     <Compile Include="Library\PackageCache\com.unity.purchasing@5.1.2\Runtime\Purchasing\Extension\Interfaces\IReadOnlyProductCache.cs" />
-    <Compile Include="Library\PackageCache\com.unity.purchasing@5.1.2\Runtime\Purchasing\Core\Purchasing\Interfaces\UseCases\IOnEntitlementRevokedUseCase.cs" />
     <Compile Include="Library\PackageCache\com.unity.purchasing@5.1.2\Runtime\Purchasing\Core\Store\Interfaces\IStoreServiceExtension.cs" />
+    <Compile Include="Library\PackageCache\com.unity.purchasing@5.1.2\Runtime\Purchasing\Core\Purchasing\Interfaces\UseCases\IOnEntitlementRevokedUseCase.cs" />
     <Compile Include="Library\PackageCache\com.unity.purchasing@5.1.2\Runtime\Purchasing\PurchasingFactory.cs" />
     <Compile Include="Library\PackageCache\com.unity.purchasing@5.1.2\Runtime\Purchasing\Telemetry\Metrics\TelemetryMetricsService.cs" />
     <Compile Include="Library\PackageCache\com.unity.purchasing@5.1.2\Runtime\Purchasing\Legacy\PurchaseFailedEventArgs.cs" />
+    <Compile Include="Library\PackageCache\com.unity.purchasing@5.1.2\Runtime\Purchasing\Core\Store\AppleAppStore\Extensions\UseCases\ClearAppleTransactionLogsUseCase.cs" />
     <Compile Include="Library\PackageCache\com.unity.purchasing@5.1.2\Runtime\Purchasing\Legacy\PurchaseEventArgs.cs" />
     <Compile Include="Library\PackageCache\com.unity.purchasing@5.1.2\Runtime\Purchasing\Core\Purchasing\AppleAppStore\Extensions\UseCases\Interfaces\IAppReceiptUseCase.cs" />
-    <Compile Include="Library\PackageCache\com.unity.purchasing@5.1.2\Runtime\Purchasing\Core\Store\AppleAppStore\Extensions\UseCases\ClearAppleTransactionLogsUseCase.cs" />
     <Compile Include="Library\PackageCache\com.unity.purchasing@5.1.2\Runtime\Purchasing\Stores\AppleAppStore\MacAppStore.cs" />
     <Compile Include="Library\PackageCache\com.unity.purchasing@5.1.2\Runtime\Purchasing\Settings\IAPSettingsConsts.cs" />
     <Compile Include="Library\PackageCache\com.unity.purchasing@5.1.2\Runtime\Purchasing\CoreServices\Environment\CoreServicesEnvironmentSubject.cs" />
@@ -360,9 +360,9 @@
     <Compile Include="Library\PackageCache\com.unity.purchasing@5.1.2\Runtime\Purchasing\Core\Store\AppleAppStore\AppleTransactionSubscriptionInfo.cs" />
     <Compile Include="Library\PackageCache\com.unity.purchasing@5.1.2\Runtime\Purchasing\Core\Purchasing\Android\GooglePlay\GooglePlayCartValidator.cs" />
     <Compile Include="Library\PackageCache\com.unity.purchasing@5.1.2\Runtime\Purchasing\Core\Store\Interfaces\IStoreServiceFactory.cs" />
+    <Compile Include="Library\PackageCache\com.unity.purchasing@5.1.2\Runtime\Purchasing\Utilities\JSONSerializer.cs" />
     <Compile Include="Library\PackageCache\com.unity.purchasing@5.1.2\Runtime\Purchasing\Core\Purchasing\Models\Interfaces\IPurchasedProductInfo.cs" />
     <Compile Include="Library\PackageCache\com.unity.purchasing@5.1.2\Runtime\Purchasing\Core\Purchasing\CartValidation\DistinctProductsCartValidator.cs" />
-    <Compile Include="Library\PackageCache\com.unity.purchasing@5.1.2\Runtime\Purchasing\Utilities\JSONSerializer.cs" />
     <Compile Include="Library\PackageCache\com.unity.purchasing@5.1.2\Runtime\Purchasing\Core\Product\AppleAppStore\Extensions\UseCases\FetchStorePromotionOrderUseCase.cs" />
     <Compile Include="Library\PackageCache\com.unity.purchasing@5.1.2\Runtime\Purchasing\Core\Retries\Interfaces\IRetryRequest.cs" />
     <Compile Include="Library\PackageCache\com.unity.purchasing@5.1.2\Runtime\Purchasing\Stores\AppleAppStore\AppleProductMetadata.cs" />
@@ -370,9 +370,9 @@
     <Compile Include="Library\PackageCache\com.unity.purchasing@5.1.2\Runtime\Purchasing\Core\Purchasing\Interfaces\IPurchaseServiceExtension.cs" />
     <Compile Include="Library\PackageCache\com.unity.purchasing@5.1.2\Runtime\Purchasing\Stores\AppleAppStore\AppleAppStore.cs" />
     <Compile Include="Library\PackageCache\com.unity.purchasing@5.1.2\Runtime\Purchasing\Telemetry\IapTelemetryException.cs" />
-    <Compile Include="Library\PackageCache\com.unity.purchasing@5.1.2\Runtime\Purchasing\Core\Store\Android\GooglePlay\Extensions\UseCases\GooglePlayStoreSetObfuscatedIdUseCase.cs" />
     <Compile Include="Library\PackageCache\com.unity.purchasing@5.1.2\Runtime\Purchasing\PurchaseFailureDescription.cs" />
     <Compile Include="Library\PackageCache\com.unity.purchasing@5.1.2\Runtime\Purchasing\Core\Store\Interfaces\IStoreService.cs" />
+    <Compile Include="Library\PackageCache\com.unity.purchasing@5.1.2\Runtime\Purchasing\Core\Store\Android\GooglePlay\Extensions\UseCases\GooglePlayStoreSetObfuscatedIdUseCase.cs" />
     <Compile Include="Library\PackageCache\com.unity.purchasing@5.1.2\Runtime\Purchasing\Telemetry\Metrics\Interfaces\ITelemetryMetricsService.cs" />
     <Compile Include="Library\PackageCache\com.unity.purchasing@5.1.2\Runtime\Purchasing\Extension\InternalStore.cs" />
     <Compile Include="Library\PackageCache\com.unity.purchasing@5.1.2\Runtime\Purchasing\Core\Purchasing\Models\UnknownPurchasedProductInfo.cs" />
@@ -726,8 +726,20 @@
       <HintPath>Library\PackageCache\com.unity.visualscripting@1.9.4\Editor\VisualScripting.Core\Dependencies\YamlDotNet\Unity.VisualScripting.YamlDotNet.dll</HintPath>
       <Private>False</Private>
     </Reference>
+    <Reference Include="GoogleMobileAds.Common">
+      <HintPath>Assets\GoogleMobileAds\GoogleMobileAds.Common.dll</HintPath>
+      <Private>False</Private>
+    </Reference>
     <Reference Include="Unity.Collections.LowLevel.ILSupport">
       <HintPath>Library\PackageCache\com.unity.collections@1.2.4\Unity.Collections.LowLevel.ILSupport\Unity.Collections.LowLevel.ILSupport.dll</HintPath>
+      <Private>False</Private>
+    </Reference>
+    <Reference Include="GoogleMobileAds">
+      <HintPath>Assets\GoogleMobileAds\GoogleMobileAds.dll</HintPath>
+      <Private>False</Private>
+    </Reference>
+    <Reference Include="Google.IOSResolver">
+      <HintPath>Assets\ExternalDependencyManager\Editor\1.2.186\Google.IOSResolver.dll</HintPath>
       <Private>False</Private>
     </Reference>
     <Reference Include="Unity.Plastic.Antlr3.Runtime">
@@ -738,6 +750,10 @@
       <HintPath>Library\PackageCache\com.unity.collab-proxy@2.11.3\Lib\Editor\Unity.Plastic.Newtonsoft.Json.dll</HintPath>
       <Private>False</Private>
     </Reference>
+    <Reference Include="GoogleMobileAds.Core">
+      <HintPath>Assets\GoogleMobileAds\GoogleMobileAds.Core.dll</HintPath>
+      <Private>False</Private>
+    </Reference>
     <Reference Include="log4netPlastic">
       <HintPath>Library\PackageCache\com.unity.collab-proxy@2.11.3\Lib\Editor\log4netPlastic.dll</HintPath>
       <Private>False</Private>
@@ -746,48 +762,12 @@
       <HintPath>Library\PackageCache\com.unity.visualscripting@1.9.4\Editor\VisualScripting.Core\Dependencies\DotNetZip\Unity.VisualScripting.IonicZip.dll</HintPath>
       <Private>False</Private>
     </Reference>
-    <Reference Include="unityplastic">
-      <HintPath>Library\PackageCache\com.unity.collab-proxy@2.11.3\Lib\Editor\unityplastic.dll</HintPath>
-      <Private>False</Private>
-    </Reference>
-    <Reference Include="Unity.VisualScripting.Antlr3.Runtime">
-      <HintPath>Library\PackageCache\com.unity.visualscripting@1.9.4\Runtime\VisualScripting.Flow\Dependencies\NCalc\Unity.VisualScripting.Antlr3.Runtime.dll</HintPath>
-      <Private>False</Private>
-    </Reference>
-    <Reference Include="Unity.VisualScripting.TextureAssets">
-      <HintPath>Library\PackageCache\com.unity.visualscripting@1.9.4\Editor\VisualScripting.Core\EditorAssetResources\Unity.VisualScripting.TextureAssets.dll</HintPath>
-      <Private>False</Private>
-    </Reference>
-    <Reference Include="Google.VersionHandlerImpl">
-      <HintPath>Assets\ExternalDependencyManager\Editor\1.2.186\Google.VersionHandlerImpl.dll</HintPath>
-      <Private>False</Private>
-    </Reference>
-    <Reference Include="Google.IOSResolver">
-      <HintPath>Assets\ExternalDependencyManager\Editor\1.2.186\Google.IOSResolver.dll</HintPath>
-      <Private>False</Private>
-    </Reference>
-    <Reference Include="GoogleMobileAds.Common">
-      <HintPath>Assets\GoogleMobileAds\GoogleMobileAds.Common.dll</HintPath>
-      <Private>False</Private>
-    </Reference>
-    <Reference Include="Google.JarResolver">
-      <HintPath>Assets\ExternalDependencyManager\Editor\1.2.186\Google.JarResolver.dll</HintPath>
-      <Private>False</Private>
-    </Reference>
-    <Reference Include="GoogleMobileAds">
-      <HintPath>Assets\GoogleMobileAds\GoogleMobileAds.dll</HintPath>
-      <Private>False</Private>
-    </Reference>
-    <Reference Include="GoogleMobileAds.Unity">
-      <HintPath>Assets\GoogleMobileAds\GoogleMobileAds.Unity.dll</HintPath>
-      <Private>False</Private>
-    </Reference>
     <Reference Include="Google.VersionHandler">
       <HintPath>Assets\ExternalDependencyManager\Editor\Google.VersionHandler.dll</HintPath>
       <Private>False</Private>
     </Reference>
-    <Reference Include="GoogleMobileAds.Core">
-      <HintPath>Assets\GoogleMobileAds\GoogleMobileAds.Core.dll</HintPath>
+    <Reference Include="unityplastic">
+      <HintPath>Library\PackageCache\com.unity.collab-proxy@2.11.3\Lib\Editor\unityplastic.dll</HintPath>
       <Private>False</Private>
     </Reference>
     <Reference Include="GoogleMobileAds.Ump.Unity">
@@ -802,8 +782,28 @@
       <HintPath>Assets\GoogleMobileAds\GoogleMobileAds.Ump.dll</HintPath>
       <Private>False</Private>
     </Reference>
+    <Reference Include="Google.VersionHandlerImpl">
+      <HintPath>Assets\ExternalDependencyManager\Editor\1.2.186\Google.VersionHandlerImpl.dll</HintPath>
+      <Private>False</Private>
+    </Reference>
+    <Reference Include="Unity.VisualScripting.Antlr3.Runtime">
+      <HintPath>Library\PackageCache\com.unity.visualscripting@1.9.4\Runtime\VisualScripting.Flow\Dependencies\NCalc\Unity.VisualScripting.Antlr3.Runtime.dll</HintPath>
+      <Private>False</Private>
+    </Reference>
+    <Reference Include="Google.JarResolver">
+      <HintPath>Assets\ExternalDependencyManager\Editor\1.2.186\Google.JarResolver.dll</HintPath>
+      <Private>False</Private>
+    </Reference>
+    <Reference Include="GoogleMobileAds.Unity">
+      <HintPath>Assets\GoogleMobileAds\GoogleMobileAds.Unity.dll</HintPath>
+      <Private>False</Private>
+    </Reference>
     <Reference Include="Newtonsoft.Json">
       <HintPath>Library\PackageCache\com.unity.nuget.newtonsoft-json@3.2.1\Runtime\Newtonsoft.Json.dll</HintPath>
+      <Private>False</Private>
+    </Reference>
+    <Reference Include="Unity.VisualScripting.TextureAssets">
+      <HintPath>Library\PackageCache\com.unity.visualscripting@1.9.4\Editor\VisualScripting.Core\EditorAssetResources\Unity.VisualScripting.TextureAssets.dll</HintPath>
       <Private>False</Private>
     </Reference>
     <Reference Include="Unity.Android.Types">

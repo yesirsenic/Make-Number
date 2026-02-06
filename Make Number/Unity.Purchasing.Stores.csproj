@@ -68,8 +68,8 @@
     <Compile Include="Library\PackageCache\com.unity.purchasing@5.1.2\Runtime\Stores\FakeStore\LifecycleNotifier.cs" />
     <Compile Include="Library\PackageCache\com.unity.purchasing@5.1.2\Runtime\Stores\Analytics\Utilitiles\UnifiedReceiptAnalyticsExtensions.cs" />
     <Compile Include="Library\PackageCache\com.unity.purchasing@5.1.2\Runtime\Stores\Android\GooglePlay\AAR\QueryProductDetailsService.cs" />
-    <Compile Include="Library\PackageCache\com.unity.purchasing@5.1.2\Runtime\Stores\Android\GooglePlay\AAR\Interfaces\IGooglePurchasesUpdatedListener.cs" />
     <Compile Include="Library\PackageCache\com.unity.purchasing@5.1.2\Runtime\Stores\Android\GooglePlay\AAR\GoogleLastKnownProductService.cs" />
+    <Compile Include="Library\PackageCache\com.unity.purchasing@5.1.2\Runtime\Stores\Android\GooglePlay\AAR\Interfaces\IGooglePurchasesUpdatedListener.cs" />
     <Compile Include="Library\PackageCache\com.unity.purchasing@5.1.2\Runtime\Stores\Android\GooglePlay\AAR\GooglePlayStoreService.cs" />
     <Compile Include="Library\PackageCache\com.unity.purchasing@5.1.2\Runtime\Stores\Core\Product\ProductServiceDependencyFactoryInjector.cs" />
     <Compile Include="Library\PackageCache\com.unity.purchasing@5.1.2\Runtime\Stores\Android\GooglePlay\Services\Interfaces\IGooglePlayStorePurchaseService.cs" />
@@ -135,13 +135,13 @@
     <Compile Include="Library\PackageCache\com.unity.purchasing@5.1.2\Runtime\Stores\BaseStore\Interfaces\IStoreInternal.cs" />
     <Compile Include="Library\PackageCache\com.unity.purchasing@5.1.2\Runtime\Stores\AppleAppStore\AppleReceiptExtensions.cs" />
     <Compile Include="Library\PackageCache\com.unity.purchasing@5.1.2\Runtime\Stores\ServicesCore\IapCoreInitializeCallback.cs" />
-    <Compile Include="Library\PackageCache\com.unity.purchasing@5.1.2\Runtime\Stores\Analytics\Interfaces\IAnalyticsServiceWrapper.cs" />
     <Compile Include="Library\PackageCache\com.unity.purchasing@5.1.2\Runtime\Stores\Core\Purchasing\PurchaseServiceDependencyFactoryInjector.cs" />
+    <Compile Include="Library\PackageCache\com.unity.purchasing@5.1.2\Runtime\Stores\Analytics\Interfaces\IAnalyticsServiceWrapper.cs" />
     <Compile Include="Library\PackageCache\com.unity.purchasing@5.1.2\Runtime\Stores\Android\GooglePlay\AAR\Models\GooglePurchaseStateEnum.cs" />
     <Compile Include="Library\PackageCache\com.unity.purchasing@5.1.2\Runtime\Stores\Analytics\CoreAnalyticsAdapter.cs" />
     <Compile Include="Library\PackageCache\com.unity.purchasing@5.1.2\Runtime\Stores\Android\GooglePlay\AAR\Interfaces\IProductDetailsQueryResponse.cs" />
-    <Compile Include="Library\PackageCache\com.unity.purchasing@5.1.2\Runtime\Stores\BaseStore\Interfaces\INativeStoreProvider.cs" />
     <Compile Include="Library\PackageCache\com.unity.purchasing@5.1.2\Runtime\Stores\Android\GooglePlay\AAR\Utils\GooglePurchaseBuilder.cs" />
+    <Compile Include="Library\PackageCache\com.unity.purchasing@5.1.2\Runtime\Stores\BaseStore\Interfaces\INativeStoreProvider.cs" />
     <Compile Include="Library\PackageCache\com.unity.purchasing@5.1.2\Runtime\Stores\Android\GooglePlay\AAR\Models\GoogleProductTypeEnum.cs" />
     <Compile Include="Library\PackageCache\com.unity.purchasing@5.1.2\Runtime\Stores\Android\GooglePlay\AAR\Listeners\BillingClientStateListener.cs" />
     <Compile Include="Library\PackageCache\com.unity.purchasing@5.1.2\Runtime\Stores\Android\GooglePlay\AAR\GoogleCachedQuerySkuDetailsService.cs" />
