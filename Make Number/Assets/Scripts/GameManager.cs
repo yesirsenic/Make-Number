@@ -42,6 +42,9 @@ public class GameManager : MonoBehaviour
     [SerializeField]
     GameObject Tutorial;
 
+    [SerializeField]
+    DragSelectManager DragSelectManager;
+
     private int number;
     private int goalNumber;
     private int level;
@@ -93,6 +96,7 @@ public class GameManager : MonoBehaviour
         is_First = true;
         BGM_Audio.time = 0f;
         BGM_Audio.Play();
+        DragSelectManager.ClearSelection();
         Debug.Log(duration);
 
 
@@ -105,6 +109,7 @@ public class GameManager : MonoBehaviour
         Continue_Popup.SetActive(false);
         BGM_Audio.time = 0f;
         BGM_Audio.Play();
+        DragSelectManager.ClearSelection();
 
     }
 

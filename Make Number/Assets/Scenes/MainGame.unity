@@ -2491,6 +2491,7 @@ MonoBehaviour:
   Continue_Popup: {fileID: 1849330439}
   BGM_Audio: {fileID: 1126009773}
   Tutorial: {fileID: 1345358861}
+  DragSelectManager: {fileID: 396021460}
   state: 0
   duration: 0
 --- !u!4 &455609745
