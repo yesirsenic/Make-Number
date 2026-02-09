@@ -44,6 +44,9 @@ public class CellSelectable : MonoBehaviour,
 
     public void OnPointerUp(PointerEventData eventData)
     {
+        if (GameManager.Instance.state != GameState.MainGame)
+            return;
+
         DragSelectManager.Instance.EndDrag();
     }
 
