@@ -11,4 +11,9 @@ public class NOADButton : MonoBehaviour
             gameObject.SetActive(false);
         }
     }
+
+    public void BuyNoAdsButton()
+    {
+        IAPManager.Instance.BuyNoAds();
+    }
 }

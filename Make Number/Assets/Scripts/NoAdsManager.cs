@@ -32,6 +32,12 @@ public class NoAdsManager : MonoBehaviour
         PlayerPrefs.SetInt(NO_ADS_KEY, 1);
         PlayerPrefs.Save();
         BannerAd.Instance.RefreshBanner();
+
+        GameObject btn = GameObject.Find("NOADButton");
+        if (btn != null)
+        {
+            btn.SetActive(false);
+        }
     }
 
     public void DebugReset()
